@@ -1,0 +1,13 @@
+base_model: Qwen/Qwen2.5-Coder-1.5B-Instruct
+chat_template: qwen
+dtype: bfloat16
+merge_method: dare_linear
+models:
+- model: /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/saves/qwen2515c15/best/sft_4o_sol_1e-5
+  parameters:
+    density: 0.5
+    weight: 0.2
+- model: /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/saves/qwen2515c15/best/sft_ct_5e6
+  parameters:
+    density: 0.5
+    weight: 0.8

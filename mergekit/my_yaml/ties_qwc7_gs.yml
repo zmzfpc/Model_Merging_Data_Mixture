@@ -1,0 +1,18 @@
+models:
+  - model: /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/saves/qwen25c7/best/sft_4o_sol_5e6
+    parameters:
+      density: 0.5
+      weight: 0.3
+  - model: /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/saves/qwen25c7/best/sft_ct_1e6
+    parameters:
+      density: 0.5
+      weight: 0.7    
+
+chat_template: qwen
+merge_method: ties
+lambda: 1.3
+base_model: Qwen/Qwen2.5-Coder-7B-Instruct
+# parameters:
+#   normalize: true
+#   int8_mask: true
+dtype: bfloat16

@@ -1,0 +1,16 @@
+models:
+  - model: /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/saves/dsc7/best/sft_4o_sol_5e6
+    parameters:
+      density: 0.5
+      weight: 0.2
+      epsilon: 0.1
+  - model: /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/saves/dsc7/best/sft_ct_1e6
+    parameters:
+      density: 0.5
+      weight: 0.8
+      epsilon: 0.1
+
+chat_template: deepseekcoder
+merge_method: della
+base_model: deepseek-ai/deepseek-coder-7b-instruct-v1.5
+dtype: bfloat16

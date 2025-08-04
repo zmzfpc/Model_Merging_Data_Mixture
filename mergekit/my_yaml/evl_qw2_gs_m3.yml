@@ -1,0 +1,21 @@
+# genpiome:
+genome: 
+    models:
+       - /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/saves/qwen2515/best/sft_4o_sol
+       - /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/saves/qwen2515/oneM/sft_ct
+    merge_method: dare_ties
+    base_model: Qwen/Qwen2.5-1.5B-Instruct
+    chat_template: qwen
+    tokenizer_source: "union"
+    # layer_granularity: 8
+tasks:
+  - name: humaneval
+    weight: 0.5
+    metric: "pass@1,create_test" 
+  - name: code2text_python
+    weight: 0.25
+    metric: "smoothed_bleu_4,none"
+    use_beam_search: false
+  - name: code2text_java
+    weight: 0.25
+    metric: "smoothed_bleu_4,none"

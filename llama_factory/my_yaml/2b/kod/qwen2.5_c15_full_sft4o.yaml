@@ -1,0 +1,51 @@
+### model
+# model_name_or_path: ibm-granite/granite-3.3-2b-instruct
+model_name_or_path: Qwen/Qwen2.5-Coder-1.5B-Instruct
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+freeze_language_model: false
+# deepspeed: examples/deepspeed/ds_z3_config.json
+
+### dataset
+dataset: kod_4o_sol, mbpp_train
+template: qwen
+cutoff_len: 4096
+# max_samples: 260000
+overwrite_cache: true
+preprocessing_num_workers: 16
+dataloader_num_workers: 0
+
+### output
+output_dir: saves/qwen25c15/best/sft_4o_sol_5e6
+# output_dir: saves/granite332/full/sft_4o
+logging_steps: 10
+save_steps: 50
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: true
+report_to: wandb  # choices: [none, wandb, tensorboard, swanlab, mlflow]
+save_total_limit: 1          
+load_best_model_at_end: true
+metric_for_best_model: eval_loss
+
+### train
+per_device_train_batch_size: 6
+gradient_accumulation_steps: 8
+learning_rate: 5.0e-6
+num_train_epochs: 2
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+
+
+### eval
+val_size: 0.1
+per_device_eval_batch_size: 4
+eval_strategy: steps
+eval_steps: 50

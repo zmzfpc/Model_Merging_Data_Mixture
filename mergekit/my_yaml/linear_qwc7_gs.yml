@@ -1,0 +1,10 @@
+models:
+  - model: /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/saves/qwen25c7/best/sft_4o_sol_5e6
+    parameters:
+      weight: 0.3
+  - model: /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/saves/qwen25c7/best/sft_ct_1e6
+    parameters:
+      weight: 0.7
+merge_method: linear
+dtype: bfloat16
+chat_template: qwen
