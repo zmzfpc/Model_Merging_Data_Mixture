@@ -109,7 +109,7 @@ cd llama_factory/job_sh
 bash run_sft_kod_qwc2515.sh
 ```
 
-**⚠️ Important**: Update all file paths in job scripts to match your environment before running.
+**Important**: Update all file paths in job scripts to match your environment before running.
 
 ## Model Merging
 
