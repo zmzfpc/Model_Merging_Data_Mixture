@@ -190,14 +190,20 @@ python json_to_markdowns.py \
     --prefix experiment_
 ```
 
-## Model Checkpoints
+### Model Checkpoint Breakdown
 
-We provide **28 pre-trained model checkpoints** covering:
+Our 28 pre-trained models include:
 
-- **Base Models**: DeepSeek-Coder (1.3B, 7B), Qwen2.5-Coder (1.5B, 7B)
-- **Task Specializations**: Code Generation, Code Summarization
-- **Training Approaches**: Single-task SFT, Multi-task Data Mixing (DM)
-- **Model Sizes**: 2B and 8B parameter variants
+1. **Single-task SFT Checkpoints (8 models)**:
+   - 4 SFT checkpoints for code generation (one for each base model)
+   - 4 SFT checkpoints for code summarization (one for each base model)
+
+2. **Multi-task Data Mixing Checkpoints (4 models)**:
+   - 4 data mixture SFT checkpoints (one for each base model)
+
+3. **Model Merging Checkpoints (16 models)**:
+   - 4 base model combinations × 4 merging methods (TIES, DARE, DELLA, Linear)
+   - Each merging method applied to all 4 base model pairs
 
 ### Download Models
 
