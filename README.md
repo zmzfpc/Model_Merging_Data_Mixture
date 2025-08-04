@@ -10,6 +10,9 @@ This research explores two fundamental approaches for creating multi-task code l
 
 We provide comprehensive implementations, 28 pre-trained model checkpoints, and evaluation frameworks to reproduce our results.
 
+- [Model Checkpoints](#Model_Checkpoints)
+- [Model Checkpoints](#Model-Checkpoints)
+- [Repository Structure](#Repository-Structure)
 
 ## Model Checkpoints
 All 28 chekpoints from the experiments reported in Table 3 of the paper can be accessed from this [Google Drive](https://drive.google.com/drive/folders/1M4FbjhO7hjlrmhGosNYkgKuSYLskaWVz?usp=sharing)
