@@ -300,7 +300,7 @@ If you use this code or our models, please cite our paper:
 
 This repository is released for research purposes. For questions or issues, please open a GitHub issue.
 
-## 📋 License
+## License
 
 This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
 
