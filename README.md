@@ -10,8 +10,21 @@ This research explores two fundamental approaches for creating multi-task code l
 
 We provide comprehensive implementations, 28 pre-trained model checkpoints, and evaluation frameworks to reproduce our results.
 
-**Download all 28 pre-trained models from Google Drive:**
-[https://drive.google.com/drive/folders/MODEL_CHECKPOINTS_FOLDER_ID](https://drive.google.com/drive/folders/MODEL_CHECKPOINTS_FOLDER_ID)
+
+## Model Checkpoints
+All 28 chekpoints from the experiments reported in Table 3 of the paper can be accessed from this [Google Drive](https://drive.google.com/drive/folders/1M4FbjhO7hjlrmhGosNYkgKuSYLskaWVz?usp=sharing)
+
+Each models is zipped with the following naming convention:
+
+```
+MODEL_NAME_SIZE_TRAINING_TASK.zip
+```
+For example
+```
+Deepseek_Coder_1_3B_SFT_Code_Gen.zip
+```
+contains the DeepseekCoder 1.3B model which was fine-tuned for the Code Generation task.
+
 ## Repository Structure
 
 ```
@@ -208,7 +221,8 @@ Our 28 pre-trained models include:
 ### Download Models
 
 **Download all 28 pre-trained models from Google Drive:**
-[https://drive.google.com/drive/folders/MODEL_CHECKPOINTS_FOLDER_ID](https://drive.google.com/drive/folders/MODEL_CHECKPOINTS_FOLDER_ID)
+
+Download the checkpoints from this [Google Drive](https://drive.google.com/drive/folders/1M4FbjhO7hjlrmhGosNYkgKuSYLskaWVz?usp=sharing)
 
 **Important**: Please modify the model paths in configuration files and scripts according to your download location. Update all references to model paths in:
 - Job scripts (`llama_factory/job_sh/`, `mergekit/job_sh/`, `eval_hm/job_sh/`)
