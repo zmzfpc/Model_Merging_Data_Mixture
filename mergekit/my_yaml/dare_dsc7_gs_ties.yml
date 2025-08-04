@@ -3,11 +3,11 @@ chat_template: deepseekcoder
 dtype: bfloat16
 merge_method: dare_ties
 models:
-- model: /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/saves/dsc7/best/sft_4o_sol_5e6
+- model: /path/to/your/project/LLaMA-Factory/saves/dsc7/best/sft_4o_sol_5e6
   parameters:
     density: 0.5
     weight: 0.5
-- model: /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/saves/dsc7/best/sft_ct_1e6
+- model: /path/to/your/project/LLaMA-Factory/saves/dsc7/best/sft_ct_1e6
   parameters:
     density: 0.5
     weight: 0.5

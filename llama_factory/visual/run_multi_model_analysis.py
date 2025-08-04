@@ -62,7 +62,7 @@ def run_granite_example():
     possible_base_paths = [
         "updated_model/granite-8b-code-base",
         "saves/granite-8b-base",
-        "/dccstor/unified-trans/huggingface/hub/models--ibm-granite--granite-8b-code-base/snapshots",
+        "/path/to/your/huggingface/hub/models--ibm-granite--granite-8b-code-base/snapshots",
     ]
     
     possible_sft_paths = [

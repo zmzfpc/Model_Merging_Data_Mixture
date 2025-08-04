@@ -1,7 +1,7 @@
 
-export HF_HOME="/dccstor/unified-trans/model_merging/granite33_2/huggingface"
+export HF_HOME="/path/to/your/project/huggingface"
 
-source /dccstor/unified-trans/model_merging/miniconda3/etc/profile.d/conda.sh 
+source /path/to/your/miniconda3/etc/profile.d/conda.sh 
 
 conda activate mergel 
 
@@ -29,22 +29,22 @@ echo "threshold: $threshold"
 
 
 python gap_correlation_analyzer.py --base_model Qwen/Qwen2.5-Coder-7B-Instruct \
-  --sft_models saves/qwen25c7/dm/5e6 /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/della_qwc7_gs \
+  --sft_models saves/qwen25c7/dm/5e6 /path/to/your/project/mergekit/merged_model/della_qwc7_gs \
   --output vis/gap_cor_qwc7_{$threshold}_dm --filter_small_gaps --gap_threshold $threshold
 
 
 python gap_correlation_analyzer.py --base_model Qwen/Qwen2.5-Coder-1.5B-Instruct \
   --sft_models saves/qwen25c15/dm/1e5  \
-  /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/dare_qwc15_gs \
+  /path/to/your/project/mergekit/merged_model/dare_qwc15_gs \
   --output vis/gap_cor_qwc15_{$threshold}_dm --filter_small_gaps --gap_threshold $threshold
 
 
 python gap_correlation_analyzer.py --base_model deepseek-ai/deepseek-coder-7b-instruct-v1.5 \
-  --sft_models /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/dare_dsc7_gs \
+  --sft_models /path/to/your/project/mergekit/merged_model/dare_dsc7_gs \
   saves/dsc7/dm/5e6 \
   --output vis/gap_cor_dsc7_{$threshold}_dm --filter_small_gaps --gap_threshold $threshold
 
 python gap_correlation_analyzer.py --base_model deepseek-ai/deepseek-coder-1.3b-instruct \
-  --sft_models /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/linear_dsc13_gsn saves/dsc13/dm/1e5 \
+  --sft_models /path/to/your/project/mergekit/merged_model/linear_dsc13_gsn saves/dsc13/dm/1e5 \
   --output vis/gap_cor_dsc13_{$threshold}_dm --filter_small_gaps --gap_threshold $threshold
 

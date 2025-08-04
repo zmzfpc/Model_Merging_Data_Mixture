@@ -1,36 +1,36 @@
 #!/usr/bin/env bash
 
 # Load conda and activate merged environment
-source /dccstor/unified-trans/model_merging/miniconda3/etc/profile.d/conda.sh
+source /path/to/your/miniconda3/etc/profile.d/conda.sh
 conda activate mergel
 
-cd /dccstor/unified-trans/model_merging/granite33_2/eval_hm/
+cd /path/to/your/project/eval_hm/
 nvidia-smi
 
 # Environment variables
-export HF_HOME="/dccstor/unified-trans/model_merging/granite33_2/huggingface"
+export HF_HOME="/path/to/your/project/huggingface"
 export TOKENIZERS_PARALLELISM="false"
-export TRITON_CACHE_DIR="/dccstor/unified-trans/model_merging/granite33_2/autotune_cache"
+export TRITON_CACHE_DIR="/path/to/your/project/autotune_cache"
 export TRITON_AUTOTUNE_CACHE_DIR="$TRITON_CACHE_DIR"
 
 # Login to Hugging Face
-HF_TOKEN="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"
+HF_TOKEN="YOUR_HF_TOKEN_HERE"
 huggingface-cli login --token "$HF_TOKEN" --add-to-git-credential
 
 models=(
-  "/dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/saves/qwen2515c15/best/sft_ct_5e6"
+  "/path/to/your/project/LLaMA-Factory/saves/qwen2515c15/best/sft_ct_5e6"
 )
 outputs=(
   "qwenc2515_pred_ct.jsonl"
 )
-data="/dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/data/instruct_code_docstring_train/test.jsonl"
+data="/path/to/your/project/LLaMA-Factory/data/instruct_code_docstring_train/test.jsonl"
 side="sentence-transformers/all-mpnet-base-v2"
 batch=64
 
 # Loop through models and execute evaluation
 for i in "${!models[@]}"; do
   model="${models[$i]}"
-  save="/dccstor/unified-trans/model_merging/granite33_2/eval_hm/job_out/s_eval/gen_output/${outputs[$i]}"
+  save="/path/to/your/project/eval_hm/job_out/s_eval/gen_output/${outputs[$i]}"
   folder_vis="code_sum/${outputs[$i]}"
 
   echo "Running eval_codesum.py with model: $model"

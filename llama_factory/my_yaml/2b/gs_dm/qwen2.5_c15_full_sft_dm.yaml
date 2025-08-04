@@ -21,7 +21,7 @@ dataloader_num_workers: 0
 
 ### output
 output_dir: saves/qwen25c15/dm/1e5
-# output_dir: saves/granite332/full/sft_4o
+# output_dir: saves/generic_model/full/sft_4o
 logging_steps: 10
 save_steps: 100
 plot_loss: true

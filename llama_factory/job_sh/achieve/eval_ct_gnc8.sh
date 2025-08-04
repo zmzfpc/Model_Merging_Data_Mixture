@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
 
 # Load conda and activate merged environment
-source /dccstor/unified-trans/model_merging/miniconda3/etc/profile.d/conda.sh
+source /path/to/your/miniconda3/etc/profile.d/conda.sh
 conda activate mergel
 
-cd /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/
+cd /path/to/your/project/LLaMA-Factory/
 nvidia-smi
 
 # Environment variables
-export HF_HOME="/dccstor/unified-trans/model_merging/granite33_2/huggingface"
+export HF_HOME="/path/to/your/project/huggingface"
 export TOKENIZERS_PARALLELISM="false"
-export TRITON_CACHE_DIR="/dccstor/unified-trans/model_merging/granite33_2/autotune_cache"
+export TRITON_CACHE_DIR="/path/to/your/project/autotune_cache"
 export TRITON_AUTOTUNE_CACHE_DIR="$TRITON_CACHE_DIR"
 
 # Login to Hugging Face
-HF_TOKEN="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"
+HF_TOKEN="YOUR_HF_TOKEN_HERE"
 huggingface-cli login --token "$HF_TOKEN" --add-to-git-credential
 
 models=(
@@ -23,7 +23,7 @@ models=(
 outputs=(
   "gnc8_preds_ct.jsonl"
 )
-data="/dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/data/instruct_code_docstring_train/test.jsonl"
+data="/path/to/your/project/LLaMA-Factory/data/instruct_code_docstring_train/test.jsonl"
 side="sentence-transformers/all-mpnet-base-v2"
 batch=64
 

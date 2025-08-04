@@ -1,4 +1,3 @@
-# Copyright 2025 OpenAccess AI Collective and the LlamaFactory team.
 #
 # This code is inspired by the OpenAccess AI Collective's axolotl library.
 # https://github.com/OpenAccess-AI-Collective/axolotl/blob/main/src/axolotl/monkeypatch/utils.py

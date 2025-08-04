@@ -1,4 +1,3 @@
-# Copyright 2025 THUDM and the LlamaFactory team.
 #
 # This code is inspired by the THUDM's ChatGLM implementation.
 # https://github.com/THUDM/ChatGLM-6B/blob/main/cli_demo.py

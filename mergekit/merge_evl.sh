@@ -1,11 +1,11 @@
-cd /dccstor/unified-trans/model_merging/granite33_2/mergekit/
+cd /path/to/your/project/mergekit/
 
 source .venv/bin/activate
 
 
 export TOKENIZERS_PARALLELISM="false"
 export HF_ALLOW_CODE_EVAL="1"
-export HF_HOME="/dccstor/unified-trans/model_merging/granite33_2/huggingface"
+export HF_HOME="/path/to/your/project/huggingface"
 export HF_TOKEN=""
 huggingface-cli login --token "$HF_TOKEN" --add-to-git-credential
 

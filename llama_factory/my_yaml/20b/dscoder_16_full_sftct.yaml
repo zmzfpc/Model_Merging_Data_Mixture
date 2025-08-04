@@ -21,7 +21,7 @@ dataloader_num_workers: 0
 
 ### output
 output_dir: saves/dsc16/best/sft_ct
-# output_dir: saves/granite332/full/sft_4o
+# output_dir: saves/generic_model/full/sft_4o
 logging_steps: 10
 save_steps: 50
 plot_loss: true

@@ -1,4 +1,3 @@
-# Copyright 2025 Moonshot AI and the LlamaFactory team.
 #
 # This code is based on the MoonshotAI's Moonlight library.
 # https://github.com/MoonshotAI/Moonlight/blob/master/examples/toy_train.py

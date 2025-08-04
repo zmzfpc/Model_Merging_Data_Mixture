@@ -6,7 +6,7 @@
 set -e
 
 # Default paths - update these for your setup
-BASE_MODEL_DEFAULT="/dccstor/unified-trans/huggingface/hub/models--ibm-granite--granite-8b-code-base"
+BASE_MODEL_DEFAULT="/path/to/your/huggingface/hub/models--ibm-granite--granite-8b-code-base"
 OUTPUT_DIR_DEFAULT="multi_model_weight_analysis_$(date +%Y%m%d_%H%M%S)"
 
 # Colors for output

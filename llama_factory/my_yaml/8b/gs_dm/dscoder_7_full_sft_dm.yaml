@@ -21,7 +21,7 @@ dataloader_num_workers: 0
 seed: 2025
 ### output
 output_dir: saves/dsc7/dm/5e6
-# output_dir: saves/granite332/full/sft_4o
+# output_dir: saves/generic_model/full/sft_4o
 logging_steps: 10
 save_steps: 100
 plot_loss: true

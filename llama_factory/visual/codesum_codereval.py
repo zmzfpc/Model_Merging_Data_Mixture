@@ -72,7 +72,7 @@ print(only_description)
 
 Example
 -------
-python codesum_codereval.py /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/CoderEval/CoderEval4Python.json ./data/coder_eval_py.jsonl
+python codesum_codereval.py /path/to/your/project/LLaMA-Factory/CoderEval/CoderEval4Python.json ./data/coder_eval_py.jsonl
 """
 import json
 import argparse

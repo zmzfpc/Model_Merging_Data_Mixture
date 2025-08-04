@@ -1,10 +1,10 @@
 #!/bin/bash
 
-cd /dccstor/unified-trans/model_merging/granite33_2/mergekit/
+cd /path/to/your/project/mergekit/
 
 export TOKENIZERS_PARALLELISM="false"
-export HF_HOME="/dccstor/unified-trans/model_merging/granite33_2/huggingface"
-export HF_TOKEN="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"
+export HF_HOME="/path/to/your/project/huggingface"
+export HF_TOKEN="YOUR_HF_TOKEN_HERE"
 huggingface-cli login --token "$HF_TOKEN" --add-to-git-credential
 
 # Function to modify YAML parameters in-place using Python
@@ -88,7 +88,7 @@ hyperparams_combinations=(
     "0.5:0.9:0.5:0.1:9"
 )
 
-test_data="/dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/data/instruct_code_docstring_train/test.jsonl"
+test_data="/path/to/your/project/LLaMA-Factory/data/instruct_code_docstring_train/test.jsonl"
 side="sentence-transformers/all-mpnet-base-v2"
 batch=64
 
@@ -135,7 +135,7 @@ for i in "${!hyperparams_combinations[@]}"; do
 
 
     # Activate mergekit environment and run merge
-    source /dccstor/unified-trans/model_merging/granite33_2/mergekit/.venv/bin/activate
+    source /path/to/your/project/mergekit/.venv/bin/activate
     mergekit-yaml "$base_yaml" "$output_dir" --cuda --trust-remote-code
     
     if [ $? -eq 0 ]; then
@@ -145,7 +145,7 @@ for i in "${!hyperparams_combinations[@]}"; do
         cp "$base_yaml" "${output_dir}/mergekit_config.yml"
         
         # Activate evalplus environment and run evaluations
-        source /dccstor/unified-trans/model_merging/granite33_2/evalplus/.venv/bin/activate
+        source /path/to/your/project/evalplus/.venv/bin/activate
         
         echo "Starting HumanEval evaluation..."
         evalplus.evaluate --model "$output_dir" --backend vllm --dataset humaneval --greedy

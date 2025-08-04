@@ -1,11 +1,11 @@
-cd /dccstor/unified-trans/model_merging/granite33_2/mergekit/
+cd /path/to/your/project/mergekit/
 
 
 
 
 export TOKENIZERS_PARALLELISM="false"
-export HF_HOME="/dccstor/unified-trans/model_merging/granite33_2/huggingface"
-export HF_TOKEN="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"
+export HF_HOME="/path/to/your/project/huggingface"
+export HF_TOKEN="YOUR_HF_TOKEN_HERE"
 huggingface-cli login --token "$HF_TOKEN" --add-to-git-credential
 
 base_model="qw2"
@@ -22,11 +22,11 @@ for i in "${!yaml_files[@]}"; do
     yaml_file="${yaml_files[$i]}"
     echo "Merging model with YAML file: ${yaml_file}"
 
-    source /dccstor/unified-trans/model_merging/granite33_2/mergekit/.venv/bin/activate
+    source /path/to/your/project/mergekit/.venv/bin/activate
     mergekit-yaml my_yaml/${yaml_file}.yml \
         merged_model/${yaml_file} --cuda --trust-remote-code
 
-    source /dccstor/unified-trans/model_merging/granite33_2/evalplus/.venv/bin/activate
+    source /path/to/your/project/evalplus/.venv/bin/activate
 
     evalplus.evaluate --model  merged_model/${yaml_file} --backend vllm --dataset humaneval --greedy
 

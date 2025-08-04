@@ -125,7 +125,7 @@ class ModelEvaluator:
     
     def run_code_summarization(self, model_path):
         """Run custom code summarization evaluation."""
-        test_data = "/dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/data/instruct_code_docstring_train/test.jsonl"
+        test_data = "/path/to/your/project/LLaMA-Factory/data/instruct_code_docstring_train/test.jsonl"
         side_model = "sentence-transformers/all-mpnet-base-v2"
         
         if not Path(test_data).exists():

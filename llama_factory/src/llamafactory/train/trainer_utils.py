@@ -1,4 +1,3 @@
-# Copyright 2025 HuggingFace Inc. and the LlamaFactory team.
 #
 # This code is inspired by the original GaLore's implementation: https://github.com/jiaweizzhao/GaLore
 # and the original LoRA+'s implementation: https://github.com/nikhil-ghosh-berkeley/loraplus

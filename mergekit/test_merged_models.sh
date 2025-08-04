@@ -1,14 +1,14 @@
 #!/bin/bash
 
-cd /dccstor/unified-trans/model_merging/granite33_2/mergekit/
+cd /path/to/your/project/mergekit/
 
 export TOKENIZERS_PARALLELISM="false"
-export HF_HOME="/dccstor/unified-trans/model_merging/granite33_2/huggingface"
-export HF_TOKEN="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"
+export HF_HOME="/path/to/your/project/huggingface"
+export HF_TOKEN="YOUR_HF_TOKEN_HERE"
 huggingface-cli login --token "$HF_TOKEN" --add-to-git-credential
 
 # Test data configurations
-test_data="/dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/data/instruct_code_docstring_train/test.jsonl"
+test_data="/path/to/your/project/LLaMA-Factory/data/instruct_code_docstring_train/test.jsonl"
 side="sentence-transformers/all-mpnet-base-v2"
 batch=64
 
@@ -40,7 +40,7 @@ test_merged_model() {
     echo "Starting HumanEval evaluation..."
     echo "$(date): Starting HumanEval evaluation" >> "$log_file"
     
-    source /dccstor/unified-trans/model_merging/granite33_2/evalplus/.venv/bin/activate
+    source /path/to/your/project/evalplus/.venv/bin/activate
     
     evalplus.evaluate --model "$model_path" --backend vllm --dataset humaneval --greedy 2>&1 | tee -a "$log_file"
     

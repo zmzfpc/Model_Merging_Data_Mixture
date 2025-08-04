@@ -6,9 +6,9 @@ Supports HuggingFace *or* vLLM back-ends, BF16, batching, and result dump.
 Example
 -------
 python eval_codesum.py \
-    --model  /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/saves/qwen2515/full/sft_ct \
-    --data  /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/data/instruct_code_docstring_train/test.jsonl \
-    --side   /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/saves/qwen2515/full/sft_ct \
+    --model  /path/to/your/project/LLaMA-Factory/saves/qwen2515/full/sft_ct \
+    --data  /path/to/your/project/LLaMA-Factory/data/instruct_code_docstring_train/test.jsonl \
+    --side   /path/to/your/project/LLaMA-Factory/saves/qwen2515/full/sft_ct \
     --batch_size 64 --bf16 --vllm \
     --save_path ./data/instruct_code_docstring_train/sftqw_preds.jsonl
 """

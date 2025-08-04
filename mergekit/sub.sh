@@ -28,8 +28,8 @@ eval_sh=(
 #     echo "Submitting job for: $sh_name"
 
 #     bsub -gpu num=1:mode=exclusive_process:gmodel=NVIDIAA100_SXM4_80GB -J eval_g_${sh_name}_a -M 50G -n 32 \
-#     -o /dccstor/unified-trans/model_merging/granite33_2/eval_hm/job_out/s_eval/g_${sh_name}_a100.out \
-#     /dccstor/unified-trans/model_merging/granite33_2/eval_hm/job_sh/s_eval/evalcodesum_${sh_name}.sh
+#     -o /path/to/your/project/eval_hm/job_out/s_eval/g_${sh_name}_a100.out \
+#     /path/to/your/project/eval_hm/job_sh/s_eval/evalcodesum_${sh_name}.sh
 
 # done
 
@@ -39,7 +39,7 @@ for i in "${!eval_sh[@]}"; do
     echo "Submitting job for: $sh_name"
 
     bsub -gpu num=1:mode=exclusive_process:gmodel=NVIDIAH10080GBHBM3 -J eval_g_${sh_name}_h -M 50G -n 32 \
-    -o /dccstor/unified-trans/model_merging/granite33_2/mergekit/job_out/m_${sh_name}_m_h.out \
-    /dccstor/unified-trans/model_merging/granite33_2/mergekit/job_sh/merge_${sh_name}.sh
+    -o /path/to/your/project/mergekit/job_out/m_${sh_name}_m_h.out \
+    /path/to/your/project/mergekit/job_sh/merge_${sh_name}.sh
 
 done

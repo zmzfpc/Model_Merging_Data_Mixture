@@ -64,35 +64,35 @@
 #    --model2 saves/dsc7/best/sft_ct_1e6  \
 #    --output enhance_results_dsc7_dm_s
 
-export HF_HOME="/dccstor/unified-trans/model_merging/granite33_2/huggingface"
+export HF_HOME="/path/to/your/project/huggingface"
 
-source /dccstor/unified-trans/model_merging/miniconda3/etc/profile.d/conda.sh 
+source /path/to/your/miniconda3/etc/profile.d/conda.sh 
 
 conda activate mergel 
 
 
 python comprehensive_plotter.py --data_file \
-  /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/vis/sft_analysis_dsc13/layer_summary.csv \
+  /path/to/your/project/LLaMA-Factory/vis/sft_analysis_dsc13/layer_summary.csv \
   --output_dir my_plots/dsc13
 
 python comprehensive_plotter.py --data_file \
-  /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/vis/sft_analysis_dsc7/layer_summary.csv \
+  /path/to/your/project/LLaMA-Factory/vis/sft_analysis_dsc7/layer_summary.csv \
   --output_dir my_plots/dsc7
 
 python comprehensive_plotter.py --data_file \
-  /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/vis/sft_analysis_qwc7/layer_summary.csv \
+  /path/to/your/project/LLaMA-Factory/vis/sft_analysis_qwc7/layer_summary.csv \
   --output_dir my_plots/qwc7
 
 python comprehensive_plotter.py --data_file \
-  /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/vis/sft_analysis_qwc15/layer_summary.csv \
+  /path/to/your/project/LLaMA-Factory/vis/sft_analysis_qwc15/layer_summary.csv \
   --output_dir my_plots/qwc15
 
 # python multi_sft_analyzer.py --base_model Qwen/Qwen2.5-Coder-7B-Instruct \
 #   --sft_models saves/qwen25c7/best/sft_ct_1e6 saves/qwen25c7/best/sft_4o_sol_5e6 saves/qwen25c7/dm/5e6 \
-#   /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/linear_qwc7_gs \
-#   /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/ties_qwc7_gs \
-#   /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/dare_qwc7_gs \
-#   /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/della_qwc7_gs \
+#   /path/to/your/project/mergekit/merged_model/linear_qwc7_gs \
+#   /path/to/your/project/mergekit/merged_model/ties_qwc7_gs \
+#   /path/to/your/project/mergekit/merged_model/dare_qwc7_gs \
+#   /path/to/your/project/mergekit/merged_model/della_qwc7_gs \
 #   --output vis/sft_analysis_qwc7
 
 
@@ -100,27 +100,27 @@ python comprehensive_plotter.py --data_file \
 #   --sft_models saves/qwen2515c15/best/sft_ct_5e6 \
 #   saves/qwen2515c15/best/sft_4o_sol_1e-5 \
 #   saves/qwen25c15/dm/1e5 \
-#   /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/linear_qwc15_gs \
-#   /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/ties_qwc15_gs \
-#   /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/dare_qwc15_gs \
-#   /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/della_qwc15_gs \
+#   /path/to/your/project/mergekit/merged_model/linear_qwc15_gs \
+#   /path/to/your/project/mergekit/merged_model/ties_qwc15_gs \
+#   /path/to/your/project/mergekit/merged_model/dare_qwc15_gs \
+#   /path/to/your/project/mergekit/merged_model/della_qwc15_gs \
 #   --output vis/sft_analysis_qwc15
 
 
 # python multi_sft_analyzer.py --base_model deepseek-ai/deepseek-coder-1.3b-instruct \
 #   --sft_models saves/dsc13/best/sft_ct_5e6 saves/dsc13/best/sft_4o_sol_1e5 saves/dsc13/dm/1e5 \
-#   /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/linear_dsc13_gs \
-#   /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/ties_dsc13_gs \
-#   /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/dare_dsc13_gs \
-#   /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/della_dsc13_gs \
+#   /path/to/your/project/mergekit/merged_model/linear_dsc13_gs \
+#   /path/to/your/project/mergekit/merged_model/ties_dsc13_gs \
+#   /path/to/your/project/mergekit/merged_model/dare_dsc13_gs \
+#   /path/to/your/project/mergekit/merged_model/della_dsc13_gs \
 #   --output vis/sft_analysis_dsc13
 
 # python multi_sft_analyzer.py --base_model deepseek-ai/deepseek-coder-7b-instruct-v1.5 \
 #   --sft_models saves/dsc7/best/sft_ct_1e6 saves/dsc7/best/sft_4o_sol_5e6 saves/dsc7/dm/5e6 \
-#   /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/linear_dsc7_gs \
-#   /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/ties_dsc7_gs \
-#   /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/dare_dsc7_gs \
-#   /dccstor/unified-trans/model_merging/granite33_2/mergekit/merged_model/della_dsc7_gs \
+#   /path/to/your/project/mergekit/merged_model/linear_dsc7_gs \
+#   /path/to/your/project/mergekit/merged_model/ties_dsc7_gs \
+#   /path/to/your/project/mergekit/merged_model/dare_dsc7_gs \
+#   /path/to/your/project/mergekit/merged_model/della_dsc7_gs \
 #   --output vis/sft_analysis_dsc7
 
 

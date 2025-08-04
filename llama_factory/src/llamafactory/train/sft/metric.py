@@ -1,4 +1,3 @@
-# Copyright 2025 HuggingFace Inc., THUDM, and the LlamaFactory team.
 #
 # This code is inspired by the HuggingFace's transformers library and the THUDM's ChatGLM implementation.
 # https://github.com/huggingface/transformers/blob/v4.40.0/examples/pytorch/summarization/run_summarization.py

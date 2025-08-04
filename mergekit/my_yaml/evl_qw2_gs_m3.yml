@@ -1,8 +1,8 @@
 # genpiome:
 genome: 
     models:
-       - /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/saves/qwen2515/best/sft_4o_sol
-       - /dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/saves/qwen2515/oneM/sft_ct
+       - /path/to/your/project/LLaMA-Factory/saves/qwen2515/best/sft_4o_sol
+       - /path/to/your/project/LLaMA-Factory/saves/qwen2515/oneM/sft_ct
     merge_method: dare_ties
     base_model: Qwen/Qwen2.5-1.5B-Instruct
     chat_template: qwen

@@ -34,8 +34,8 @@ for i in "${!eval_sh[@]}"; do
     echo "Submitting job for: $sh_name"
 
     bsub -gpu num=1:mode=exclusive_process:gmodel=NVIDIAA100_SXM4_80GB -J eval_g_${sh_name}_a -M 50G -n 32 \
-    -o /dccstor/unified-trans/model_merging/granite33_2/eval_hm/job_out/g_eval/g_${sh_name}_a100.out \
-    /dccstor/unified-trans/model_merging/granite33_2/eval_hm/job_sh/g_eval/evalplus_${sh_name}.sh
+    -o /path/to/your/project/eval_hm/job_out/g_eval/g_${sh_name}_a100.out \
+    /path/to/your/project/eval_hm/job_sh/g_eval/evalplus_${sh_name}.sh
 
 done
 
@@ -45,7 +45,7 @@ done
 #     echo "Submitting job for: $sh_name"
 
 #     bsub -gpu num=1:mode=exclusive_process:gmodel=NVIDIAH10080GBHBM3 -J eval_g_${sh_name}_h -M 50G -n 32 \
-#     -o /dccstor/unified-trans/model_merging/granite33_2/eval_hm/job_out/g_eval/g_${sh_name}_h100.out \
-#     /dccstor/unified-trans/model_merging/granite33_2/eval_hm/job_sh/g_eval/evalplus_${sh_name}.sh
+#     -o /path/to/your/project/eval_hm/job_out/g_eval/g_${sh_name}_h100.out \
+#     /path/to/your/project/eval_hm/job_sh/g_eval/evalplus_${sh_name}.sh
 
 # done

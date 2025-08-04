@@ -1,4 +1,3 @@
-# Copyright 2025 EleutherAI, HuggingFace Inc., Yukang Chen, and the LlamaFactory team.
 #
 # This code is based on the EleutherAI's GPT-NeoX and the HuggingFace's Transformers libraries.
 # https://github.com/huggingface/transformers/blob/v4.40.0/src/transformers/models/llama/modeling_llama.py

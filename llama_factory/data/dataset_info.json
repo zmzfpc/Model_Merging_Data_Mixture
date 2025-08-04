@@ -752,7 +752,7 @@
     }
   },
   "kod_r1_90k":{
-    "file_name": "/dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/data/Kodcode_filtered.jsonl",
+    "file_name": "/path/to/your/project/LLaMA-Factory/data/Kodcode_filtered.jsonl",
     "columns": {
       "prompt": "question",
       "response": "r1_solution"
@@ -773,7 +773,7 @@
     }
   },
     "commitpackft":{
-    "hf_hub_url": "/dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/data/filtered_commitpackft",
+    "hf_hub_url": "/path/to/your/project/LLaMA-Factory/data/filtered_commitpackft",
     "columns": {
       "prompt": "input",
       "query": "query",
@@ -781,7 +781,7 @@
     }
   },
   "code2text":{
-    "file_name": "/dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/data/instruct_code_docstring_train/train.jsonl",
+    "file_name": "/path/to/your/project/LLaMA-Factory/data/instruct_code_docstring_train/train.jsonl",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -789,14 +789,14 @@
     }
   },
   "opencode_cleaned":{
-    "file_name": "/dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/data/OpenCodeInstruct_filtered.jsonl",
+    "file_name": "/path/to/your/project/LLaMA-Factory/data/OpenCodeInstruct_filtered.jsonl",
     "columns": {
       "prompt": "input",
       "response": "output"
     }
   },
   "data_merge_gs":{
-    "file_name": "/dccstor/unified-trans/model_merging/granite33_2/LLaMA-Factory/data/data_merging/gs_train.jsonl",
+    "file_name": "/path/to/your/project/LLaMA-Factory/data/data_merging/gs_train.jsonl",
     "columns": {
       "prompt": "instruction",
       "query": "input",
