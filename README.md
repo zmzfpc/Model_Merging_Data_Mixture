@@ -14,7 +14,7 @@ We provide comprehensive implementations, 28 pre-trained model checkpoints, and 
 - [Repository Structure](#Repository-Structure)
 
 ## Model Checkpoints
-All 28 chekpoints from the experiments reported in Table 3 of the paper can be accessed from this [Google Drive](https://drive.google.com/drive/folders/1M4FbjhO7hjlrmhGosNYkgKuSYLskaWVz?usp=sharing)
+All 28 chekpoints from the experiments reported in Table 3 of the paper can be accessed from  Google Drive using the links in the file [checkpoints.csv](./checkpoints.csv)
 
 Each models is zipped with the following naming convention:
 
@@ -224,7 +224,7 @@ Our 28 pre-trained models include:
 
 **Download all 28 pre-trained models from Google Drive:**
 
-Download the checkpoints from this [Google Drive](https://drive.google.com/drive/folders/1M4FbjhO7hjlrmhGosNYkgKuSYLskaWVz?usp=sharing)
+Download the checkpoints from  Google Drive using the links in the file [checkpoints.csv](./checkpoints.csv)
 
 **Important**: Please modify the model paths in configuration files and scripts according to your download location. Update all references to model paths in:
 - Job scripts (`llama_factory/job_sh/`, `mergekit/job_sh/`, `eval_hm/job_sh/`)
