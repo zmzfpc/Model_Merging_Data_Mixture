@@ -1,6 +1,6 @@
 # Multi-task Code LLMs: Data Mix or Model Merge?
 
-This repository contains the implementation for the paper **"Multi-task Code LLMs: Data Mix or Model Merge?"** submitted to AAAI.
+This repository contains the implementation for the paper **"Multi-task Code LLMs: Data Mix or Model Merge?"** submitted to the third international workshop on large language models for code.
 
 ## Overview
 
