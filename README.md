@@ -289,21 +289,6 @@ Our experiments show that:
 - **Data Mixing** generally outperforms model merging for 2B models
 - **Larger models** benefit more from model merging strategies
 
-## Troubleshooting
-
-### Common Issues
-
-1. **CUDA OOM**: Reduce batch size or use gradient checkpointing
-2. **Path errors**: Update all absolute paths in job scripts
-3. **Token errors**: Ensure HF_TOKEN is properly set
-4. **Evaluation failures**: Check data paths and model compatibility
-
-### Performance Tips
-
-- Use `bf16` training for better performance
-- Enable gradient checkpointing for large models
-- Use multiple GPUs with DeepSpeed for 8B+ models
-- Cache datasets to avoid repeated preprocessing
 
 ## Citation
 
@@ -312,9 +297,9 @@ If you use this code or our models, please cite our paper:
 ```bibtex
 @article{anonymous2024multitask,
   title={Multi-task Code LLMs: Data Mix or Model Merge?},
-  author={Anonymous},
-  journal={AAAI},
-  year={2026}
+  author={},
+  journal={},
+  year={}
 }
 ```
 
@@ -326,6 +311,3 @@ This repository is released for research purposes. For questions or issues, plea
 
 This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
 
----
-
-**Note**: This repository contains the implementation for an anonymous submission. All identifying information has been removed for double-blind review.
