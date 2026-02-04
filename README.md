@@ -295,11 +295,11 @@ Our experiments show that:
 If you use this code or our models, please cite our paper:
 
 ```bibtex
-@article{anonymous2024multitask,
+@article{zhu2026multi,
   title={Multi-task Code LLMs: Data Mix or Model Merge?},
-  author={},
-  journal={},
-  year={}
+  author={Zhu, Mingzhi and Sobolev, Boris and Krishna, Rahul and Pavuluri, Raju and Patterson, Stacy and Merler, Michele},
+  journal={arXiv preprint arXiv:2601.21115},
+  year={2026}
 }
 ```
 
